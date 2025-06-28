@@ -1,0 +1,1050 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', 'sans-serif';
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: rgba(0, 0, 0, 0.821);
+    background-position: center center;
+    /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem de fundo */
+
+    color: #d4af37;
+    padding: 1.5em 2em;
+    /* Aumentei um pouco o padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    /* Adicionei uma borda inferior para separar o cabeçalho do conteúdo */
+    position: sticky;
+    /* Faz o elemento grudar quando atinge 'top' */
+    top: 0;
+    /* Gruda no topo da tela */
+    z-index: 1000;
+    /* Garante que o cabeçalho fique acima de outros elementos na rolagem */
+    width: 100%;
+    /* Garante que o cabeçalho ocupe toda a largura */
+    box-sizing: border-box;
+    /* Garante que o padding não adicione largura extra */
+}
+
+.logo {
+    font-size: 2.5em;
+    /* Aumentei o tamanho da fonte do logo */
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    /* Uma fonte com serifa para um toque clássico */
+    color: #d4af37;
+    /* Cor dourada para o logo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adicionei uma sombra ao texto para destaque */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.1em;
+    /* Aumentei o tamanho da fonte dos links */
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #d1b203;
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/barber-bg.jpg');
+    /* Adicionei uma imagem de fundo com um gradiente escuro */
+    background-size: cover;
+    /* Garante que a imagem cubra toda a seção hero */
+    background-position: center center;
+    /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem de fundo */
+    background-attachment: fixed;
+    /* Faz a imagem de fundo ficar fixa durante a rolagem */
+
+    color: #fff;
+    /* Cor do texto na seção hero */
+    padding: 6em 2em;
+    /* Aumentei o padding para dar mais espaço */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    /* Garante uma altura mínima para a seção hero */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    /* Aumentei o tamanho da fonte do título */
+    margin-bottom: 0.3em;
+    /* Reduzi o espaçamento inferior */
+    color: #d4af37;
+    /* Cor dourada para o título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Adicionei uma sombra ao texto para destaque */
+}
+
+.hero p {
+    font-size: 1.5em;
+    /* Aumentei o tamanho da fonte do parágrafo */
+    color: #eee;
+    /* Cor clara para o parágrafo */
+    margin-bottom: 2em;
+    /* Aumentei o espaçamento inferior */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Adicionei uma sombra ao texto para destaque */
+}
+
+.hero img {
+    width: 25%;
+    /* Aumentei a largura da imagem para 25% */
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto;
+    border-radius: 100px;
+    /* Adicionei bordas arredondadas à imagem */
+
+    background-color: #d4af37;
+    padding: 0.2em 0.2em;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #ddcf0b;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #f3f389;
+}
+
+.hero button {
+    background-color: #d4af37;
+    color: #fff;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #b89428;
+}
+
+/* --- Estilos Gerais para as Seções --- */
+.services {
+    background-color: #f8f8f8;
+    /* Fundo neutro para a seção */
+    padding: 4em 2em;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.services h2 {
+    font-size: 2.8em;
+    color: #222;
+    margin-bottom: 1.5em;
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa abaixo do título da seção de serviços */
+.services h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    /* Cor dourada */
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.services-list {
+    display: grid;
+    /* Ajuste as colunas para telas menores, se necessário */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    /* Aumentei o espaçamento entre os cards */
+    margin-top: 2.5em;
+    /* Mais espaço do título para os cards */
+}
+
+/* Estilos gerais para os cards de serviço, incluindo o efeito hover */
+.service {
+    background-color: #fff;
+    /* Fundo branco padrão */
+    padding: 2.5em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Novas propriedades para a imagem de fundo */
+    background-size: cover;
+    /* A imagem cobre todo o fundo do card */
+    background-position: center;
+    /* Centraliza a imagem */
+    color: #fff;
+    /* Altera a cor do texto para branco para contraste com a imagem */
+    position: relative;
+    /* Importante para o overlay do gradiente */
+    overflow: hidden;
+    /* Garante que a imagem e o gradiente não "escapem" */
+}
+
+/* Overlay para escurecer a imagem de fundo e melhorar a legibilidade do texto */
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+    /* Gradiente preto semi-transparente */
+    z-index: 1;
+    /* Garante que o overlay fique sobre a imagem */
+}
+
+/* Para garantir que o texto e o título fiquem acima do overlay */
+.service h3,
+.service p {
+    position: relative;
+    z-index: 2;
+    /* Texto acima do overlay */
+    color: #fff;
+    /* Garante que o texto seja branco */
+}
+
+/* Estilo específico para o título do serviço sobre a imagem */
+.service h3 {
+    color: #d4af37;
+    /* Mantém o título dourado para contraste com o fundo escuro */
+}
+
+/* Agora, as imagens de fundo para cada serviço */
+.service-classic-cut {
+    background-image: url('img/corte-classico.png');
+    /* Caminho para sua imagem */
+}
+
+.service-modern-cut {
+    background-image: url('img/corte-moderno.png');
+    /* Caminho para sua imagem */
+}
+
+.service-beard {
+    background-image: url('img/barba.png');
+    /* Caminho para sua imagem */
+}
+
+.service-treatment {
+    background-image: url('img/tratamento.png');
+    /* Caminho para sua imagem */
+}
+
+.service-depilacao {
+    background-image: url('img/depilacao.png');
+    /* Caminho para sua imagem */
+}
+
+.service-coloracao {
+    background-image: url('img/coloracao.png');
+    /* Caminho para sua imagem */
+}
+
+/* No hover, você pode querer remover a sombra do card, já que a imagem já se destaca */
+.service:hover {
+    transform: translateY(-8px);
+    box-shadow: none
+        /* Remove a sombra no hover para focar na imagem */
+}
+
+/* --- Seção Sobre Nós --- */
+.about {
+    background-color: #f8f8f8;
+    /* Fundo neutro para a seção */
+    padding: 4em 2em;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.about h2 {
+    font-size: 2.8em;
+    color: #222;
+    margin-bottom: 1.5em;
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa abaixo do título da seção Sobre Nós */
+.about h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    /* Cor dourada */
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.about-card {
+    background-color: #fff;
+    /* Fundo branco para o card */
+    padding: 2.5em 2em;
+    /* Aumentei o padding para mais espaço interno */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destaque */
+    max-width: 800px;
+    /* Largura máxima do card */
+    margin: 2em auto;
+    /* Centraliza o card na página */
+    text-align: center;
+    color: #333;
+    /* Cor do texto */
+    margin-top: 2em;
+    /* Espaçamento entre o título e o card */
+}
+
+.about-card p {
+    font-size: 1.1em;
+    /* Aumentei o tamanho da fonte do parágrafo */
+    margin-bottom: 1em;
+    /* Espaçamento inferior */
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+    /* Remove o espaçamento inferior do último parágrafo */
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Seção de Agendamento --- */
+.appointment {
+    padding: 4em 2em;
+    text-align: center;
+    max-width: 1000px;
+    /* Reduzi um pouco a largura máxima para concentrar */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.appointment h2 {
+    font-size: 2.8em;
+    color: #222;
+    margin-bottom: 1.5em;
+    position: relative;
+    display: inline-block;
+}
+
+.appointment h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    /* Cor dourada */
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.appointment p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+.appointment-options {
+    display: flex;
+    flex-direction: column;
+    /* Organiza os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    gap: 3em;
+    /* Espaçamento entre as opções (WhatsApp e formulário) */
+    margin-top: 2em;
+}
+
+/* Estilos para a CTA do WhatsApp */
+.whatsapp-cta {
+    background-color: #e6ffed;
+    /* Um verde claro para o fundo do bloco do WhatsApp */
+    border: 1px solid #c2e2cc;
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-width: 450px;
+    /* Largura máxima para o bloco do WhatsApp */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.whatsapp-cta h3 {
+    font-size: 1.8em;
+    color: #25D366;
+    /* Cor verde do WhatsApp */
+    margin-bottom: 0.8em;
+}
+
+.whatsapp-cta p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 1.5em;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    /* Permite alinhar ícone e texto */
+    align-items: center;
+    background-color: #25D366;
+    /* Cor verde do WhatsApp */
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 80px;
+    /* Bordas bem arredondadas para um "pill" button */
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+    /* Tom mais escuro no hover */
+    transform: translateY(-2px);
+    /* Efeito de "levante" */
+}
+
+.whatsapp-button img {
+
+    outline: none;
+    /* Remove o contorno padrão */
+    width: 30px;
+    /* Tamanho do ícone do WhatsApp */
+    height: 30px;
+    margin-right: 10px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.or-separator {
+    font-size: 1em;
+    color: #777;
+    margin: 3em 0;
+    position: relative;
+    padding: 0 1em;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    width: 30%;
+    /* Largura da linha */
+    height: 0.5px;
+    /* Espessura da linha */
+    background-color: #ccc;
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+
+/* --- Responsividade --- */
+
+/* Esconde o botão do hambúrguer por padrão em telas grandes */
+.hamburger-menu {
+    display: none;
+    /* Esconde o botão do hambúrguer por padrão */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    /* Acima do header */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    /* Cor das linhas do hambúrguer */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Media Query para Telas Menores (ex: Celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* Coloca logo e nav em coluna */
+        padding: 1em;
+        /* Ajusta padding */
+        align-items: flex-start;
+        /* Alinha itens ao início */
+    }
+
+    .logo {
+        margin-bottom: 1em;
+        /* Espaço abaixo do logo */
+        font-size: 2em;
+        /* Reduz tamanho do logo */
+        text-align: center;
+        /* Centraliza logo */
+        width: 100%;
+        /* Ocupa toda a largura */
+    }
+
+    .hero {
+        font-size: 4em 1em;
+        /*Reduz um pouco o padding */
+        min-height: 400px;
+        /* Altura Minima*/
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        /*Titulo Principal */
+    }
+
+    .hero p {
+        font-size: 1em;
+        /* Tamanho do Paragrafo */
+    }
+
+    .hero img {
+        width: 40%;
+        max-width: 150px;
+    }
+
+    /*Ajustes para a seções de Serviços ( e outras seções) */
+    .services h2,
+    .about h2,
+    .appointment h2,
+    .contact h2 {
+        font-size: 2.2em;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        /* Força uma unica coluna para celulares */
+        gap: 20px;
+        /* Reduz espaço entre os cards */
+    }
+
+    .service {
+        padding: 2em 1.5em;
+    }
+
+    .service h3 {
+        font-size: 1.4em;
+    }
+
+    .service p {
+        font-size: 0.95em;
+    }
+
+    /* Ajustes para a seção de Agendamento */
+    .whatsapp-cta {
+        padding: 2em;
+        /*Bloco do whatsapp */
+    }
+
+    .whatsapp-button {
+        font-size: 1.1em;
+        padding: 0.8em 1.5em;
+    }
+
+    .whatsapp-button img {
+        width: 25px;
+        /*Icone */
+        height: 25px;
+    }
+
+    /* Ajustes para o Rodapé */
+    footer {
+        font-size: 0.9em;
+        padding: 1em;
+    }
+
+}
+
+/* Mostra o botão do hambúrguer em telas menores */
+.hamburger-menu {
+    display: block;
+    position: absolute;
+    /* Posição absoluta para o botão */
+    top: 1.5em;
+    /* Ajusta a posição */
+    right: 1em;
+    /* Ajusta a posição */
+}
+
+nav ul {
+    flex-direction: column;
+    /* Itens do menu em coluna */
+    width: 100%;
+    /* Ocupa toda a largura */
+    text-align: center;
+    background-color: rgba(34, 34, 34, 0.95);
+    /* Fundo escuro semi-transparente */
+    position: absolute;
+    top: 100%;
+    /* Abaixo do header */
+    left: 0;
+    transform: translateY(-100%);
+    /* Esconde o menu para cima */
+    opacity: 0;
+    /* Torna o menu invisível */
+    pointer-events: none;
+    /* Não interage com o mouse quando escondido */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+nav ul.active {
+    /* Esta classe será adicionada via JavaScript */
+    transform: translateY(0);
+    /* Mostra o menu */
+    opacity: 1;
+    /* Torna o menu visível */
+    pointer-events: auto;
+    /* Permite interação com o mouse */
+}
+
+nav li {
+    margin: 0;
+    /* Remove margem lateral */
+    padding: 1em 0;
+    /* Espaçamento vertical */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Separador entre itens */
+}
+
+nav li:last-child {
+    border-bottom: none;
+    /* Remove borda do último item */
+}
+
+nav li a {
+    font-size: 1.2em;
+    /* Ajusta tamanho da fonte do link */
+    display: block;
+    /* Ocupa toda a largura para clique */
+}
+
+/* Opcional: Media Query para Tablets (se quiser um breakpoint diferente para eles) */
+/* Se você quiser que tablets (ex: entre 769px e 1024px) tenham 2 colunas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas para tablets */
+        gap: 25px;
+    }
+
+    /* Você pode ajustar outros elementos aqui se quiser um layout específico para tablets */
+}
+
+
+/* --- Seção Nossa Equipe (Carrossel) --- */
+.team-section {
+    background-color: #f8f8f8;
+    /* Fundo similar a outras seções */
+    padding: 4em 2em;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    /* Necessário para posicionamento das setas do carrossel */
+}
+
+.team-section h2 {
+    font-size: 2.8em;
+    color: #222;
+    margin-bottom: 1.5em;
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa abaixo do título da seção */
+.team-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    /* Cor dourada */
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    /* Importante para esconder os itens fora da visão */
+    width: 100%;
+    max-width: 900px;
+    /* Largura máxima do carrossel */
+    margin: 2em auto;
+    /* Centraliza e espaça */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    /* Sombra mais pronunciada */
+    background-color: #fff;
+    padding: 2em;
+    /* Espaçamento interno */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Transição suave para o slide */
+}
+
+.team-member {
+    min-width: 100%;
+    /* Garante que cada membro ocupe a largura total do container no slide */
+    flex-shrink: 0;
+    /* Impede que os itens encolham */
+    padding: 1.5em;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-member img {
+    width: 180px;
+    /* Tamanho fixo para as fotos */
+    height: 180px;
+    /* Altura igual à largura para garantir círculo perfeito */
+    border-radius: 50%;
+    /* Transforma a imagem em círculo */
+    object-fit: cover;
+    /* Garante que a imagem preencha o círculo sem distorcer */
+    border: 4px solid #d4af37;
+    /* Borda dourada na imagem */
+    margin-bottom: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para a imagem */
+}
+
+.team-member h3 {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 0.5em;
+}
+
+.team-member .role {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.team-member .bio {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    /* Limita a largura da biografia para melhor leitura */
+    margin: 0 auto;
+}
+
+/* Botões de navegação (setas) */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semi-transparente */
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.2em;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10;
+    /* Garante que fiquem acima do conteúdo */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Pontos indicadores (dots) */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    /* Espaço acima dos pontos */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot.active {
+    background-color: #d4af37;
+    /* Cor dourada para o ponto ativo */
+    transform: scale(1.2);
+    /* Aumenta um pouco o ponto ativo */
+}
+
+/* --- Responsividade para a seção da equipe --- */
+@media (max-width: 768px) {
+    .team-section {
+        padding: 3em 1em;
+        /* Ajusta padding */
+    }
+
+    .carousel-container {
+        padding: 1em;
+        /* Reduz padding interno do container do carrossel */
+        max-width: 100%;
+        /* Ocupa a largura total em telas menores */
+        margin: 1.5em auto;
+    }
+
+    .team-member img {
+        width: 150px;
+        /* Reduz o tamanho da imagem do barbeiro */
+        height: 150px;
+    }
+
+    .team-member h3 {
+        font-size: 1.5em;
+        /* Ajusta tamanho do título */
+    }
+
+    .team-member .role {
+        font-size: 1em;
+        /* Ajusta tamanho do texto de função */
+    }
+
+    .team-member .bio {
+        font-size: 0.9em;
+        /* Ajusta tamanho da biografia */
+        max-width: 90%;
+        /* Ajusta a largura máxima da bio */
+    }
+
+    .carousel-button {
+        padding: 0.6em 0.9em;
+        /* Reduz o padding dos botões */
+        font-size: 1.2em;
+        /* Reduz o tamanho da fonte dos botões */
+    }
+
+    .carousel-button.prev {
+        left: 5px;
+        /* Ajusta posição */
+    }
+
+    .carousel-button.next {
+        right: 5px;
+        /* Ajusta posição */
+    }
+
+    .carousel-dots {
+        margin-top: 1.5em;
+        /* Ajusta espaçamento dos pontos */
+    }
+
+    .dot {
+        width: 8px;
+        /* Reduz o tamanho dos pontos */
+        height: 8px;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 480px) {
+    .team-section h2 {
+        font-size: 2em;
+    }
+
+    .carousel-container {
+        padding: 0.8em;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-member h3 {
+        font-size: 1.3em;
+    }
+
+    .team-member .bio {
+        font-size: 0.85em;
+    }
+}
+
+/* --- Social Links (Contato) --- */
+.social-links {
+    margin-top: 2em;
+    /* Espaçamento acima dos ícones */
+    display: flex;
+    justify-content: center;
+    /* Centraliza os ícones */
+    gap: 1.5em;
+    /* Espaçamento entre os ícones */
+}
+
+.social-links a {
+    color: #333;
+    /* Cor padrão dos ícones */
+    font-size: 2.5em;
+    /* Tamanho dos ícones */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #d4af37;
+    /* Cor dourada no hover */
+    transform: scale(1.1);
+    /* Um pequeno efeito de escala no hover */
+}
+
+/* Opcional: Cores específicas para cada ícone no hover, se quiser */
+.social-links a .fa-instagram:hover {
+    color: #E4405F;
+    /* Cor do Instagram */
+}
+
+.social-links a .fa-facebook-f:hover {
+    color: #1877F2;
+    /* Cor do Facebook */
+}
+
+/* --- Seção Contato (melhorias) --- */
+.contact {
+    /* Mantenha seus estilos existentes para .contact */
+    padding-bottom: 4em;
+    /* Aumenta o padding inferior para dar espaço ao mapa */
+}
+
+.map-container {
+    margin: 2em auto;
+    /* Centraliza o mapa e adiciona espaçamento */
+    max-width: 800px;
+    /* Largura máxima para o mapa */
+    border-radius: 8px;
+    /* Bordas arredondadas para o mapa */
+    overflow: hidden;
+    /* Garante que o mapa respeite as bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar o mapa */
+}
+
+.map-container iframe {
+    width: 100%;
+    /* Faz o mapa ocupar toda a largura do contêiner */
+    height: 400px;
+    /* Altura fixa para o mapa */
+    border: none;
+    /* Remove a borda padrão do iframe */
+}
+
+/* Responsividade para o mapa */
+@media (max-width: 768px) {
+    .map-container {
+        margin: 1.5em auto;
+        /* Ajusta espaçamento em telas menores */
+    }
+
+    .map-container iframe {
+        height: 300px;
+        /* Reduz a altura do mapa em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 250px;
+        /* Altura ainda menor para celulares pequenos */
+    }
+}
